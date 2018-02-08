@@ -4,12 +4,10 @@ exports.handler = function (event, context, callback) {
 
 
 	ddb.query({
-		TableName: 'Hiru002',
-		ExpressionAttributeValues: {
-			':id': '002'
-		},
-		KeyConditionExpression: 'ID = :id',
-		FilterExpression: 'Year > :id'
+		TableName: 'ThuvvaTable',
+		ExpressionAttributeValues: {},
+		KeyConditionExpression: '',
+		FilterExpression: ''
 	}, function (err, data) {
 		if (err) {
 			//handle error
