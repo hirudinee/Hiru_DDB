@@ -1,6 +1,8 @@
 let AWS = require('aws-sdk');
 const ddb = new AWS.DynamoDB.DocumentClient();
 exports.handler = function (event, context, callback) {
+	
+	
 	ddb.query({
 		TableName: 'HiruTest',
 		ExpressionAttributeValues: { ':id': '002' },
@@ -19,5 +21,5 @@ exports.handler = function (event, context, callback) {
 	});
 
 
-	callback(null, 'Successfully executed');
+	//callback(null, 'Successfully executed');
 }
