@@ -4,7 +4,7 @@ exports.handler = function (event, context, callback) {
 
 
 	ddb.query({
-		TableName: 'HiruTest',
+		TableName: 'Hiru002',
 		ExpressionAttributeValues: {
 			':id': '002'
 		},
