@@ -9,7 +9,7 @@ exports.handler = function (event, context, callback) {
 			':id': '002'
 		},
 		KeyConditionExpression: 'ID = :id',
-		FilterExpression: 'ID > :id'
+		FilterExpression: 'Year > :id'
 	}, function (err, data) {
 		if (err) {
 			//handle error
