@@ -5,10 +5,11 @@ exports.handler = function (event, context, callback) {
 	var message ={};
 	message.id = event.id;
 	message.name = event.name;
+	message.year = event.year;
 	
 	ddb.put({
 		TableName: 'HiruTest',
-		Item: { 'ID': message.id, 'Name': message.name }
+		Item: { 'ID': message.id, 'Name': message.name, 'Year':message.year }
 	}, function (err, data) {
 		if (err) {
 			console.log('error : ',err);
